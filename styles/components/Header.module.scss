@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.header{
+  min-height: 80px;
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+.nav{
+  display: flex;
+  gap: 20px;
+}
+.nav>a{
+  @include h5;
+  color: $white;
+  font-weight: bolder;
+}
+.profile{
+  display: flex;
+
+}
+.img{
+  position: relative;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+
+}

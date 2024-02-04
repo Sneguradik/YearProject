@@ -5,3 +5,39 @@
 
 
 $blue : #2d30fa;
+$white: rgba(#fff, .75);
+
+@mixin fontFamily{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+@mixin h1{
+  @include fontFamily;
+  font-size: 48px;
+}
+@mixin h2 {
+  @include fontFamily;
+  font-size: 40px;
+}
+@mixin h3 {
+  @include fontFamily;
+  font-size: 32px;
+}
+@mixin h4 {
+  @include fontFamily;
+  font-size: 24px;
+}
+@mixin h5 {
+  @include fontFamily;
+  font-size: 20px;
+}
+@mixin h6 {
+  @include fontFamily;
+  font-size: 16px;
+}
+@mixin h7 {
+  @include fontFamily;
+  font-size: 12px;
+}
+
