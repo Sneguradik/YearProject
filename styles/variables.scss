@@ -6,6 +6,13 @@
 
 $blue : #2d30fa;
 $white: rgba(#fff, .75);
+$lightgraybg: rgba(#ccc,.5);
+$lavander: #CCC9DC;
+$charcoal:#324A5F;
+$deepblue:#1B2A41;
+$rblack: #0C1821;
+$red: #92140C;
+$green: #548C2F;
 
 @mixin fontFamily{
   font-family: 'Raleway', sans-serif;
@@ -41,3 +48,6 @@ $white: rgba(#fff, .75);
   font-size: 12px;
 }
 
+@mixin animation {
+  transition: all ease-in-out .5s ;
+}

@@ -1,2 +1,77 @@
+@import "styles/variables";
+
+.main{
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap:40px;
+}
+.main_wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_btn{
+  display: flex;
+  position: relative;
+
+  max-width: 800px;
+  aspect-ratio: 5/2;
+  padding: 25px;
+  background-color: rgba($rblack, .8);
+  border-radius: 20px;
+  gap: 20px;
+
+  @include animation;
+
+  &>span{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    visibility: hidden;
+    @include h6;
+    font-weight: bold;
+    color:$lavander;
+  }
+
+  &>svg{
+    @include h4;
+    color: $lavander;
+    border-radius: 5px;
+    border: 2px solid $lavander;
+    padding: 5px;
+  }
+
+  &>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
 
+    &>h2{
+      @include h3;
+      color: $lavander;
+      font-weight: bolder;
+    }
+
+    &>span{
+      color: $white;
+      @include h6;
+    }
+  }
+
+  &:hover{
+    background-color: rgba($rblack,1);
+    &>div, &>svg{ visibility: hidden;}
+    &>span{ visibility: visible;}
+  }
+}
+.nav_buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

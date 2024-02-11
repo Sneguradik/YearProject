@@ -1,0 +1,21 @@
+@import "styles/variables";
+
+.layout{
+  outline: none;
+  border: none;
+  background: none;
+  padding: 10px;
+  border-radius: 15px;
+  @include animation;
+}
+
+.default_style{
+  background-color: $deepblue;
+  color: $lavander;
+  @include h6;
+
+  &:hover{
+    color: $deepblue;
+    background-color: $lavander;
+  }
+}

@@ -1,0 +1,49 @@
+@import "styles/variables";
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $rblack;
+}
+
+.controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &>h2{
+    @include h3;
+    color: $lavander;
+    font-weight: bold;
+  }
+  &>div{
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.table{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap:5px;
+}
+
+.table_section{
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1/1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid white;
+
+
+}
+
+.table_section_date{
+  @include h7;
+  font-weight: bolder;
+  
+}
