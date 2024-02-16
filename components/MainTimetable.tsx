@@ -1,6 +1,7 @@
 import styles from "@/styles/components/MainTimeTable.module.scss";
 import Button from "@/components/UIKit/Button";
 import {IDayPlan, IMainTimeTable} from "@/Logic/interfaces";
+import {CSSProperties} from "react";
 export default function MainTimetable({Days}:IMainTimeTable) {
   return(
     <div className={styles.container}>
@@ -38,9 +39,17 @@ const Months = [
 ]
 
 function TableSection({DayPlan}:{DayPlan: IDayPlan}) {
+  const colors:CSSProperties = DayPlan.Date.getDay() == 0?
+    {backgroundColor:"rgba(146,20,12,.2)", color: "#92140C"} :
+    {backgroundColor:"rgba(84,140,47,.2)",color:"#548C2F"};
   return (
     <div className={styles.table_section}>
-      <span className={styles.table_section_date}>{DayPlan.Date.getDay()} {Months[DayPlan.Date.getMonth()-1]}</span>
+      <div>
+        <span className={styles.table_section_date} style={colors}>
+          {DayPlan.Date.getDate()} {Months[DayPlan.Date.getMonth()]}
+        </span>
+      </div>
+
     </div>
   )
 }

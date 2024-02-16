@@ -17,6 +17,22 @@ export default function Home() {
         Type : "Seminar"
       }],
       Date: new Date(2024,3,26)
+    },
+    {
+      Activities:[{
+        Name: "Project seminar",
+        Date: new Date(2024, 3, 27, 13, 0),
+        Type: "Seminar"
+      },{
+        Name: "Calcus",
+        Date: new Date(2024, 3,28, 14,20),
+        Type: "Lecture"
+      }],
+      Date : new Date(2024, 3, 27)
+    },
+    {
+      Activities:[],
+      Date: new Date(2024,3,28)
     }
   ]
 
