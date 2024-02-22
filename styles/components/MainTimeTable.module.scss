@@ -24,10 +24,32 @@
   }
 }
 
+.day_plan_container{
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  background-color: $rblack;
+  z-index: 10;
+  top: -200%;
+  left: 0;
+  @include animation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &>svg{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    @include h3;
+    color: #ff0f00;
+  }
+}
+
 .table{
   display: grid;
   grid-template-columns: repeat(7,1fr);
-  gap:5px;
+  gap:20px;
 }
 
 .table_section{
@@ -35,16 +57,41 @@
   flex-direction: column;
   aspect-ratio: 1/1;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid white;
+  position: relative;
+  gap: 10px;
 
 
 }
 
 .table_section_date{
-  @include h7;
-  font-weight: bolder;
-  padding: 5px;
-  width: fit-content;
-  border-radius: 5px;
+  &>span{
+    @include h7;
+    font-weight: bolder;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+  }
+  display: flex;
+  justify-content: space-between;
+}
+.table_section_arranged{
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: rgba(#888,.2);
+}
+.table_section_today{
+  border: 3px solid $red;
+}
+
+.table_section_activity_title{
+  @include h5;
+  color: $lavander;
+  font-weight: 500;
 }

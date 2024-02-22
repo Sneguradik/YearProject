@@ -1,0 +1,58 @@
+@import "styles/variables";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap :5px;
+  background: none;
+  @include h6;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid $charcoal;
+  @include animation;
+
+  &>label{
+    font-size: 0.75em;
+    color: $charcoal;
+    font-weight: bold;
+    @include animation;
+  }
+
+  &>div{
+    font-size: 1em;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+
+    &>svg{
+      color: $charcoal;
+      font-size: 1.2em;
+      @include animation;
+    }
+
+    &>input{
+      background: none;
+      outline: none;
+      border: none;
+      font-size: 1em;
+      font-weight: 600;
+      color: $lavander;
+      display: flex;
+      width: 100%;
+    }
+
+
+  }
+
+  &:hover{
+    border: 2px solid $blue;
+    &>label,&>div>svg{
+      color: $blue;
+    }
+  }
+}
+.label{
+  
+}
+

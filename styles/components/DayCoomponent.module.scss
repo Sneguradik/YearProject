@@ -1,0 +1,96 @@
+@import "styles/variables";
+
+.container{
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  padding: 20px;
+  background-color: $deepblue;
+  height: fit-content;
+  border-radius: 20px;
+}
+
+.title_date{
+  color: $lavander;
+  @include h3;
+}
+.sub_title{
+  color: $rblack;
+  @include h5;
+  font-weight: bold;
+  margin-left: 16px;
+}
+.activities_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.activity{
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 2px solid $blue;
+}
+.activity_title{
+  display: flex;
+  justify-content: space-between;
+
+  &>h2{
+    @include h4;
+    font-weight: bold;
+    color: $lavander;
+  }
+
+  &>span{
+    @include h6;
+    font-weight: 550;
+    color: $rblack;
+  }
+}
+.activity_specific_container{
+  display: flex;
+  flex-flow: row wrap;
+}
+.activity_specific{
+  display: flex;
+  padding: 5px;
+  background-color: $charcoal;
+  border-radius: 5px;
+  align-items: center;
+  gap: 5px;
+  @include h7;
+  font-weight: bold;
+  color: $lavander;
+}
+.teacher{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  @include h6;
+
+  color: $charcoal;
+}
+.notes{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 32px;
+}
+.note{
+  color: $white;
+  @include h6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &>span{
+    aspect-ratio: 1/1;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+  }
+}
