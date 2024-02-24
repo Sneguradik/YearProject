@@ -27,7 +27,10 @@ export default function DayComponent({DayPlan}:{DayPlan : IDayPlan}) {
   }
 
   const deleteNote = (id:number) =>{
-
+    const strings = plan.Notes;
+    delete strings[id];
+    // @ts-ignore
+    setPlan({Notes:strings,...plan});
   }
 
   return(

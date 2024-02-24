@@ -1,0 +1,41 @@
+@import "styles/variables";
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+.container{
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+  background-color: $deepblue;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  gap:30px;
+
+  &>h2{
+    @include h2;
+    color: $lavander;
+  }
+
+}
+.auth_btn{
+  background-color: $rblack;
+  height: 50px;
+}
+.hse_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  background-color: $blue;
+
+  &>svg{
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1/1;
+
+  }
+}

@@ -4,34 +4,13 @@ import Button from "@/components/UIKit/Button";
 import {IDayPlan, IMainTimeTable} from "@/Logic/interfaces";
 import {CSSProperties, MouseEventHandler, MutableRefObject, useEffect, useRef, useState} from "react";
 import {ContactStyles, getShortDayName, getShortMonthName, isArranged, isToday} from "@/Logic/Utils";
-import DayComponent from "@/components/DayComponent";
-import {MdClose} from "react-icons/md";
+import {useParams, usePathname, useRouter} from "next/navigation";
 export default function MainTimetable({Days}:IMainTimeTable) {
-  const [DayPlan, setDayPlan] = useState<IDayPlan>(null);
 
-  useEffect(() => {
-    showSection();
-  }, [DayPlan]);
-
-  const container  = useRef() as MutableRefObject<HTMLDivElement>;
-
-  const showSection = ()=>{
-    container.current.style.top = window.scrollY.toString()+"px";
-    document.body.style.overflowY = "hidden"
-  }
-
-  const closeSection = () =>{
-    container.current.style.top = "-2000%";
-    document.body.style.overflowY = "auto";
-  }
+  const router = useRouter();
 
   return(
     <>
-      <div className={styles.day_plan_container} ref={container}>
-        <MdClose onClick={closeSection}/>
-        {DayPlan?<DayComponent DayPlan={DayPlan}/>:null}
-
-      </div>
       <div className={styles.container}>
         <div className={styles.controls}>
           <h2>Periods</h2>
@@ -44,7 +23,8 @@ export default function MainTimetable({Days}:IMainTimeTable) {
         <div className={styles.table}>
           {Days.map((value,i) => {
             return(<TableSection key={i} DayPlan={value} onClick={()=>{
-              setDayPlan(value);}}/>)
+              router.push(`/dayplan/${value.Date.toDateString()}`)
+            }}/>)
           })}
         </div>
       </div>

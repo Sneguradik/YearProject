@@ -1,4 +1,5 @@
 import React from "react";
+import {UUID} from "crypto";
 
 export interface ILayout {
   children:React.ReactNode
@@ -17,6 +18,18 @@ export interface IDayPlan {
   Notes: Array<string>
 }
 
+export interface ICourse {
+  Id : UUID,
+  Name : string,
+
+}
+
 export interface IMainTimeTable {
   Days: Array<IDayPlan>
+}
+
+export interface IDayPlanPage {
+  params:{
+    slug : string
+  }
 }
