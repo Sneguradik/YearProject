@@ -9,7 +9,7 @@ import java.util.UUID
 data class User(
     @Serializable(with = UUIDSerializer::class) val id: UUID,
     val username: String, val name: String, val surname: String,
-    val status: String, val group: Group?
+    val status: String, val group: Group?, val courses : List<Course>
 )
 
 
